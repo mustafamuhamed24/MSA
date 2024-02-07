@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Entry Form</title>
+</head>
+<body>
+    <form action="/submit-form" method="post" enctype="multipart/form-data">
+        <input type="text" name="clientName" placeholder="Client Name" required>
+        <input type="text" name="unitNumber" placeholder="Unit Number" required>
+        <!-- Add other input fields as needed -->
+        <input type="file" name="pdfFile" accept="application/pdf" required>
+        <button type="submit">Submit</button>
+    </form>
+<script src="script/server.js"></script>
+</body>
+</html>
