@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>Marassi Security</title>
+    <link rel="stylesheet" href="assests/style/style.css" />
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <!-- <li class="profile">
+                <h2 asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Welcome mostafakhamiss456.</h2>
+            </li> -->
+            <br>
+            <!-- <li>
+                <a href="#">
+                    <i class="fas fa-home" style="color: rgb(255, 255, 255);"></i>
+                    <b>Home</b>
+                </a>
+            </li> -->
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-user-group" style="color: rgb(56, 143, 155);"></i>
+                    <b>تصاريح العمل</b>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-bell" style="color: #3076d1;"></i>
+                    <b>الاشعارات</b>
+                </a>
+            </li>
+            <li>
+                <a href="expiredAccounts.html" class="active">
+                    <i class="fas fa-pen" style="color: rgba(216, 64, 26, 0.549);"></i>
+                    <b>التصريحات المنتهية</b>
+                </a>
+            </li>
+            <li>
+                <a href="events.html">
+                    <i class="fas fa-star" style="color:#dab42b;"></i>
+                    <b>التعليمات و المهام </b>
+                </a>
+            </li>
+            <li>
+                <a href="#" id="reports" onclick="rreportList()">
+                    <i class="fas fa-book" style="color: rgb(255, 255, 255);"></i>
+                    <ul id="reports-list">
+                        <span style="display: flex; align-items: center;">
+                            <li><b>التقارير</b></li>
+                            <div id="Arrow">
+                                <i class="fa-solid fa-circle-arrow-down"
+                                    style="font-size: 20px;margin-right: 50px;"></i>
+                            </div>
+                        </span>
+                    </ul>
+                </a>
+            </li>
+            <div id="visible-list">
+                <b>
+                    <a href="allReports/reports.html">
+                        <li>الزيارات</li>
+                    </a>
+                    <a href="allReports/reports2.html">
+                        <li>الاحداث اليومية</li>
+                    </a>
+                    <a href="allReports/reports3.html">
+                        <li>دخول العمالة</li>
+                    </a>
+                    <a href="allReports/reports4.html">
+                        <li>دخول الملاك</li>
+                    </a>
+                    <a href="allReports/reports5.html">
+                        <li>المتروكات</li>
+                    </a>
+                    <a href="allReports/reports6.html">
+                        <li> المذكرات </li>
+                    </a>
+                    <a href="allReports/reports7.html">
+                        <li> يومية الافراد</li>
+                    </a>
+                    <a href="allReports/reports8.html">
+                        <li> كشوف المتابعة </li>
+                    </a>
+                    <a href="allReports/reports9.html">
+                        <li> التصاريح</li>
+                    </a>
+                    <a href="allReports/reports10.html">
+                        <li> المعثورات و المفقودات </li>
+                    </a>
+                    <a href="allReports/reports11.html">
+                        <li> المجمع</li>
+                    </a>
+                </b>
+            </div>
+            <li>
+                <a href="#">
+                    <i class="fas fa-cog" style="color: silver;"></i>
+                    <b>اعدادات الحساب</b>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link text-dark" href="/Identity/Account/Register">
+                    <i class="fa-solid fa-user-plus" style="color: rgb(61, 133, 61);"></i>
+                    <b>تسجيل حساب</b>
+                </a>
+            </li>
+            <li class="log-out">
+                <form class="log-out" action="/Identity/Account/Logout?returnUrl=%2F" method="post">
+                    <button type="submit" class="nav-link btn btn-link text-dark">تسجيل الخروج</button>
+                    <input name="__RequestVerificationToken" type="hidden"
+                        value="CfDJ8HrVl2u1E9JFtopi5z7ApC-mtePJEE75UNtMQDXG2oplMfPmcj1ICOLlxXjS47VxLQba2KlF4_cu5pZ5bXZwTsP6qufThfnJnGUcic5biwKsVjQ6WMOEXeIS3phyZxmfa-XWNxhScHRnI0hXjUN374EieHI7lANeg28AHTdvL-3C8u0hBJ4DoPta0CVVZyElTQ" />
+                </form>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="title-info">
+            <b>التصريحات المنتهية</b>
+            <i class="fas fa-table"></i>
+        </div>
+
+        <center>
+            <h1 class="form-title">التصريحات المنتهية</h1>
+        </center>
+        <form action="">
+            <div class="formInputs" id="uploadForm" enctype="multipart/form-data">
+                <input type="text" oninput="SearchData(this.value)" id="search" placeholder="البحث بالقطاع "
+                    style="width: 70%;">
+                <select class="searchBtn2" onchange="GetSearchMood(this.value)">
+                    <option value="search_Sector"> البحث بالقطاع </option>
+                    <option value="search_UnitNumber">البحث برقم الوحدة</option>
+                    <option value="search_PermitStartDate">البحث بتاريخ الاصدار</option>
+                    <option value="search_ExpiredDate">البحث بتاريخ الانتهاء</option>
+                </select>
+            </div>
+        </form>
+        <table style="margin-top: 30px;">
+            <tr>
+                <th>#</th>
+                <th>القطاع</th>
+                <th>رقم الوحدة</th>
+                <th>رقم الحركة</th>
+                <th>مرسل التصريح</th>
+                <th> ملاحظات التصريح</th>
+                <th>ملف التصريح</th>
+                <th>تاريخ الاصدار</th>
+                <th>تاريخ الانتهاء</th>
+                <th>اسم موظف CM</th>
+            </tr>
+            <tbody id="expired-tbody">
+            </tbody>
+        </table>
+        <div id="ex-warning" style="margin-top: 50px;">
+        </div>
+    </div>
+    <script src="assests/script/jquerry.js"></script>
+    <script src="assests/script/script.js"></script>
+    <script src="assests/script/ecxpiredAccounts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
+
+
+</body>
+
+</html>
