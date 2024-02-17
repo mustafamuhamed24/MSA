@@ -478,12 +478,12 @@ let showData = () => {
         <td>${i + 1}</td>
         <td>${ClientData[i].Sector}</td>
         <td>${ClientData[i].Unit_Number_Input}</td>
-        <td>[${i + 1}]</td>
         <td>${ClientData[i].Passenger}</td>
         <td>${ClientData[i].PermitDescrpition}</td>
         <td><button id="openPdf" onclick="openPdf(${i})">فتح الملف</button></td>
         <td>${ClientData[i].PermitStartDate}</td>
         <td>${ClientData[i].ExpiredDate}</td>
+        <td>[${i + 1}]</td>
         <td>${ClientData[i].CM_Employeee}</td>
         <td><button id="Update" onclick="UpdateData(${i})">تحديث</button></td>
         <td><button id="Delete" onclick="DeleteData(${i})" >حذف</button></td>
@@ -637,20 +637,20 @@ let searchData = (value) => {
         for (let i = 0; i < ClientData.length; i++) {
             if (ClientData[i].Sector.includes(value)) {
                 table += `
-                <tr>
-                <td>${i + 1}</td>
-                <td>${ClientData[i].Sector}</td>
-                <td>${ClientData[i].Unit_Number_Input}</td>
-                <td>[${i + 1}]</td>
-                <td>${ClientData[i].Passenger}</td>
-                <td>${ClientData[i].PermitDescrpition}</td>
-                <td><button id="openPdf" onclick="openPdf(${i})">فتح الملف</button></td>
-                <td>${ClientData[i].PermitStartDate}</td>
-                <td>${ClientData[i].ExpiredDate}</td>
-                <td>${ClientData[i].CM_Employeee}</td>
-                <td><button id="Update" onclick="UpdateData(${i})">تحديث</button></td>
-                <td><button id="Delete" onclick="DeleteData(${i})" >حذف</button></td>
-                </tr>
+        <tr>
+        <td>${i + 1}</td>
+        <td>${ClientData[i].Sector}</td>
+        <td>${ClientData[i].Unit_Number_Input}</td>
+        <td>${ClientData[i].Passenger}</td>
+        <td>${ClientData[i].PermitDescrpition}</td>
+        <td><button id="openPdf" onclick="openPdf(${i})">فتح الملف</button></td>
+        <td>${ClientData[i].PermitStartDate}</td>
+        <td>${ClientData[i].ExpiredDate}</td>
+        <td>[${i + 1}]</td>
+        <td>${ClientData[i].CM_Employeee}</td>
+        <td><button id="Update" onclick="UpdateData(${i})">تحديث</button></td>
+        <td><button id="Delete" onclick="DeleteData(${i})" >حذف</button></td>
+        </tr>
                 `;
             }
         }
@@ -659,20 +659,20 @@ let searchData = (value) => {
         for (let i = 0; i < ClientData.length; i++) {
             if (ClientData[i].UnitNumber.includes(value)) {
                 table += `
-                <tr>
-                <td>${i + 1}</td>
-                <td>${ClientData[i].Sector}</td>
-                <td>${ClientData[i].Unit_Number_Input}</td>
-                <td>[${i + 1}]</td>
-                <td>${ClientData[i].Passenger}</td>
-                <td>${ClientData[i].PermitDescrpition}</td>
-                <td><button id="openPdf" onclick="openPdf(${i})">فتح الملف</button></td>
-                <td>${ClientData[i].PermitStartDate}</td>
-                <td>${ClientData[i].ExpiredDate}</td>
-                <td>${ClientData[i].CM_Employeee}</td>
-                <td><button id="Update" onclick="UpdateData(${i})">تحديث</button></td>
-                <td><button id="Delete" onclick="DeleteData(${i})" >حذف</button></td>
-                </tr>
+        <tr>
+        <td>${i + 1}</td>
+        <td>${ClientData[i].Sector}</td>
+        <td>${ClientData[i].Unit_Number_Input}</td>
+        <td>${ClientData[i].Passenger}</td>
+        <td>${ClientData[i].PermitDescrpition}</td>
+        <td><button id="openPdf" onclick="openPdf(${i})">فتح الملف</button></td>
+        <td>${ClientData[i].PermitStartDate}</td>
+        <td>${ClientData[i].ExpiredDate}</td>
+        <td>[${i + 1}]</td>
+        <td>${ClientData[i].CM_Employeee}</td>
+        <td><button id="Update" onclick="UpdateData(${i})">تحديث</button></td>
+        <td><button id="Delete" onclick="DeleteData(${i})" >حذف</button></td>
+        </tr>
                 `;
             }
         }
@@ -682,20 +682,20 @@ let searchData = (value) => {
         for (let i = 0; i < ClientData.length; i++) {
             if (ClientData[i].PermitStartDate.includes(value)) {
                 table += `
-                <tr>
-                <td>${i + 1}</td>
-                <td>${ClientData[i].Sector}</td>
-                <td>${ClientData[i].Unit_Number_Input}</td>
-                <td>[${i + 1}]</td>
-                <td>${ClientData[i].Passenger}</td>
-                <td>${ClientData[i].PermitDescrpition}</td>
-                <td><button id="openPdf" onclick="openPdf(${i})">فتح الملف</button></td>
-                <td>${ClientData[i].PermitStartDate}</td>
-                <td>${ClientData[i].ExpiredDate}</td>
-                <td>${ClientData[i].CM_Employeee}</td>
-                <td><button id="Update" onclick="UpdateData(${i})">تحديث</button></td>
-                <td><button id="Delete" onclick="DeleteData(${i})" >حذف</button></td>
-                </tr>
+        <tr>
+        <td>${i + 1}</td>
+        <td>${ClientData[i].Sector}</td>
+        <td>${ClientData[i].Unit_Number_Input}</td>
+        <td>${ClientData[i].Passenger}</td>
+        <td>${ClientData[i].PermitDescrpition}</td>
+        <td><button id="openPdf" onclick="openPdf(${i})">فتح الملف</button></td>
+        <td>${ClientData[i].PermitStartDate}</td>
+        <td>${ClientData[i].ExpiredDate}</td>
+        <td>[${i + 1}]</td>
+        <td>${ClientData[i].CM_Employeee}</td>
+        <td><button id="Update" onclick="UpdateData(${i})">تحديث</button></td>
+        <td><button id="Delete" onclick="DeleteData(${i})" >حذف</button></td>
+        </tr>
         `;
             }
         }
@@ -705,20 +705,20 @@ let searchData = (value) => {
         for (let i = 0; i < ClientData.length; i++) {
             if (ClientData[i].ExpiredDate.includes(value)) {
                 table += `
-                <tr>
-                <td>${i + 1}</td>
-                <td>${ClientData[i].Sector}</td>
-                <td>${ClientData[i].Unit_Number_Input}</td>
-                <td>[${i + 1}]</td>
-                <td>${ClientData[i].Passenger}</td>
-                <td>${ClientData[i].PermitDescrpition}</td>
-                <td><button id="openPdf" onclick="openPdf(${i})">فتح الملف</button></td>
-                <td>${ClientData[i].PermitStartDate}</td>
-                <td>${ClientData[i].ExpiredDate}</td>
-                <td>${ClientData[i].CM_Employeee}</td>
-                <td><button id="Update" onclick="UpdateData(${i})">تحديث</button></td>
-                <td><button id="Delete" onclick="DeleteData(${i})" >حذف</button></td>
-                </tr>
+        <tr>
+        <td>${i + 1}</td>
+        <td>${ClientData[i].Sector}</td>
+        <td>${ClientData[i].Unit_Number_Input}</td>
+        <td>${ClientData[i].Passenger}</td>
+        <td>${ClientData[i].PermitDescrpition}</td>
+        <td><button id="openPdf" onclick="openPdf(${i})">فتح الملف</button></td>
+        <td>${ClientData[i].PermitStartDate}</td>
+        <td>${ClientData[i].ExpiredDate}</td>
+        <td>[${i + 1}]</td>
+        <td>${ClientData[i].CM_Employeee}</td>
+        <td><button id="Update" onclick="UpdateData(${i})">تحديث</button></td>
+        <td><button id="Delete" onclick="DeleteData(${i})" >حذف</button></td>
+        </tr>
         `;
             }
         }
